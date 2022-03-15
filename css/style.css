@@ -1,0 +1,91 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: rgb(158, 197, 50);
+}
+
+
+h1 {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: -50px 0;
+    color: #0e112e;
+    font-size: 4em;
+
+    font-family: 'Mochiy Pop P One', sans-serif;
+}
+
+h2 {
+    font-family: 'Mochiy Pop One', sans-serif;
+}
+
+section {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: #0e112e;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    /* clip-path: circle(0px at center center); */
+}
+
+.innerText {
+    position: fixed;
+    top: 50%;
+    left: 100%;
+    transform: translateY(-50%);
+    white-space: nowrap;
+    z-index: 1;
+    font-size: 8vw;
+    color: #fff;
+    text-align: center;
+    width: 100%;
+}
+
+.text {
+    position: fixed;
+    top: 50%;
+    left: 100%;
+    transform: translateY(-50%);
+    white-space: nowrap;
+    z-index: 1;
+    font-size: 8vw;
+    text-align: center;
+
+    color: transparent;
+    -webkit-text-stroke: 2px #0e112e;
+
+    width: 100%;
+}
+
+.container {
+    position: relative;
+    margin-top: 200vh;
+    background: #0e112e;
+    padding: 100px;
+    color: #fff;
+}
+
+.container h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.container p {
+    font-size: 2em;
+}
