@@ -43,7 +43,7 @@ section .arrow {
 
     font-size: 4em;
 
-    color: #fff;
+    color: #0e112e;
 
     animation: bounce infinite 1s;
 }

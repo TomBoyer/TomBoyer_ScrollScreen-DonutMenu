@@ -6,6 +6,8 @@ header {
     transition: .3s;
 
     z-index: 10;
+
+    font-family: 'Delius Unicase', cursive;
 }
 
 @media all and (max-width:767px) {
@@ -93,6 +95,8 @@ header.active {
     color: #222237;
     transform: rotate(calc(360deg / -8 * var(--i)));
     border-radius: 50%;
+    text-decoration: none;
+    
 }
 
 .menu.active li.active {
