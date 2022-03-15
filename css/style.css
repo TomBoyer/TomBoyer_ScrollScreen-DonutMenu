@@ -40,7 +40,9 @@ section {
     justify-content: center;
     align-items: center;
 
-    clip-path: circle(0px at center center);
+    -webkit-clip-path: circle(0px at center center);
+
+            clip-path: circle(0px at center center);
 }
 
 .innerText {

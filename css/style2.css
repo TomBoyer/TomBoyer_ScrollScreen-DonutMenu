@@ -45,7 +45,9 @@ section .arrow {
 
     color: #0e112e;
 
-    animation: bounce infinite 1s;
+    -webkit-animation: bounce infinite 1s;
+
+            animation: bounce infinite 1s;
 }
 
 
@@ -102,28 +104,6 @@ section .curve img {
     font-size: 2em;
 }
 
-@-moz-keyframes bounce {
-
-    0%,
-    20%,
-    50%,
-    80%,
-    100% {
-        -moz-transform: translateY(0);
-        transform: translateY(0);
-    }
-
-    40% {
-        -moz-transform: translateY(-30px);
-        transform: translateY(-30px);
-    }
-
-    60% {
-        -moz-transform: translateY(-15px);
-        transform: translateY(-15px);
-    }
-}
-
 @-webkit-keyframes bounce {
 
     0%,
@@ -131,17 +111,14 @@ section .curve img {
     50%,
     80%,
     100% {
-        -webkit-transform: translateY(0);
         transform: translateY(0);
     }
 
     40% {
-        -webkit-transform: translateY(-30px);
         transform: translateY(-30px);
     }
 
     60% {
-        -webkit-transform: translateY(-15px);
         transform: translateY(-15px);
     }
 }
@@ -153,23 +130,14 @@ section .curve img {
     50%,
     80%,
     100% {
-        -moz-transform: translateY(0);
-        -ms-transform: translateY(0);
-        -webkit-transform: translateY(0);
         transform: translateY(0);
     }
 
     40% {
-        -moz-transform: translateY(-30px);
-        -ms-transform: translateY(-30px);
-        -webkit-transform: translateY(-30px);
         transform: translateY(-30px);
     }
 
     60% {
-        -moz-transform: translateY(-15px);
-        -ms-transform: translateY(-15px);
-        -webkit-transform: translateY(-15px);
         transform: translateY(-15px);
     }
 }

@@ -35,7 +35,8 @@ body{
     width: 200px;
     border-bottom: 3px solid #ff3d00;
     box-sizing: border-box;
-    animation: drawLine 4s linear infinite;
+    -webkit-animation: drawLine 4s linear infinite;
+            animation: drawLine 4s linear infinite;
   }
   .loader:before {
     content: "";
@@ -53,12 +54,32 @@ body{
     background-size: 3px 3px, 8px 8px, 8px 8px, 16px 88px;
     background-position: center bottom, left 88px, right 88px, left top;
     transform: rotate(25deg);
-    animation: pencilRot 4s linear infinite;
+    -webkit-animation: pencilRot 4s linear infinite;
+            animation: pencilRot 4s linear infinite;
+  }
+  
+  @-webkit-keyframes drawLine {
+    0%, 100% { width: 0px }
+    45%, 55% { width: 200px }
   }
   
   @keyframes drawLine {
     0%, 100% { width: 0px }
     45%, 55% { width: 200px }
+  }
+  
+  @-webkit-keyframes pencilRot {
+    0%, 45% {
+      bottom: -6px;
+      left: calc(100% + 14px);
+      transform: rotate(25deg);
+    }
+    55%,
+    100% {
+      bottom: -12px;
+      left: calc(100% + 16px);
+      transform: rotate(220deg);
+    }
   }
   
   @keyframes pencilRot {
