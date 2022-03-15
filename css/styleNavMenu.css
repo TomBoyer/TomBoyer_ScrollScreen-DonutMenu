@@ -4,12 +4,32 @@ header {
     left: -90px;
 
     transition: .3s;
+
+    z-index: 10;
+}
+
+@media all and (max-width:767px) {
+    header {
+        position: absolute;
+        top: 70%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
 }
 
 header.active {
     position: absolute;
     top: 0px;
     left: 0px;
+}
+
+@media all and (max-width:767px) {
+    header.active {
+        position: absolute;
+        top: 70%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
 }
 
 .menu {
@@ -79,16 +99,22 @@ header.active {
     transform: rotate(calc(360deg / 8 * var(--i))) translateX(12px);
 }
 
+.toggle.active #cross.active {
+    z-index: 100;
+    visibility: visible;
+    color: #333;
+}
+
 .indicator {
     transform-origin: right;
     position: absolute;
     left: calc(50% + 2.5px);
     width: 100px;
     height: 1px;
-    /* background: red; */
-    /* background: transparent; */
+    /* background: red;
+    background: transparent; */
     pointer-events: none;
-    transition: .5s;
+    transition: .2s;
 }
 
 .indicator::before {
@@ -96,12 +122,12 @@ header.active {
     position: absolute;
     top: -27.5px;
     left: 72px;
-    width: 55px;
+    width: 155px;
     height: 55px;
     background: #222237;
-    box-shadow: 0 0 0 6px #29fd53;
-    border-radius: 50%;
-    transition: .5s;
+    /* box-shadow: 0 0 0 6px #29fd53; */
+    border-radius: 30px;
+    transition: .2s;
     opacity: 0;
 }
 

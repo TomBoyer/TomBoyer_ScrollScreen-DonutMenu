@@ -9,5 +9,167 @@ html {
 }
 
 body {
-    background: rgb(100, 119, 160);
+    /* background: rgb(100, 119, 160); */
+    background: rgb(41, 40, 40);
+    height: 300vh;
+}
+
+section {
+    position: absolute;
+    width: 100%;
+    height: calc(100% - 200px);
+    background: #2abbff;
+
+    z-index: 1;
+}
+
+section h1 {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: -50px 0;
+    color: #0e112e;
+    font-size: 4em;
+
+    font-family: 'Mochiy Pop P One', sans-serif;
+}
+
+section .arrow {
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    /* transform: translate(-50%, 150%); */
+
+    font-size: 4em;
+
+    color: #fff;
+
+    animation: bounce infinite 1s;
+}
+
+
+@media all and (max-width:767px) {
+    section .arrow {
+        position: absolute;
+        top: 60%;
+        left: 50%;
+
+        z-index: 2;
+    }
+}
+
+section .curve {
+    position: absolute;
+    bottom: -200px;
+    height: 200px;
+    width: 100%;
+
+    transform-origin: top;
+    z-index: 1;
+}
+
+@media all and (max-width:767px) {
+
+    section {
+        height: calc(100%- 350px);
+    }
+
+    section .curve {
+        height: 200px;
+    }
+}
+
+section .curve img {
+    width: 100%;
+    height: 100%;
+}
+
+.container {
+    color: #fff;
+}
+
+.container .text {
+    position: absolute;
+    top: 100%;
+}
+
+.container h2 {
+    font-size: 2.5em;
+}
+
+.container p {
+    font-size: 2em;
+}
+
+@-moz-keyframes bounce {
+
+    0%,
+    20%,
+    50%,
+    80%,
+    100% {
+        -moz-transform: translateY(0);
+        transform: translateY(0);
+    }
+
+    40% {
+        -moz-transform: translateY(-30px);
+        transform: translateY(-30px);
+    }
+
+    60% {
+        -moz-transform: translateY(-15px);
+        transform: translateY(-15px);
+    }
+}
+
+@-webkit-keyframes bounce {
+
+    0%,
+    20%,
+    50%,
+    80%,
+    100% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+    }
+
+    40% {
+        -webkit-transform: translateY(-30px);
+        transform: translateY(-30px);
+    }
+
+    60% {
+        -webkit-transform: translateY(-15px);
+        transform: translateY(-15px);
+    }
+}
+
+@keyframes bounce {
+
+    0%,
+    20%,
+    50%,
+    80%,
+    100% {
+        -moz-transform: translateY(0);
+        -ms-transform: translateY(0);
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+    }
+
+    40% {
+        -moz-transform: translateY(-30px);
+        -ms-transform: translateY(-30px);
+        -webkit-transform: translateY(-30px);
+        transform: translateY(-30px);
+    }
+
+    60% {
+        -moz-transform: translateY(-15px);
+        -ms-transform: translateY(-15px);
+        -webkit-transform: translateY(-15px);
+        transform: translateY(-15px);
+    }
 }
